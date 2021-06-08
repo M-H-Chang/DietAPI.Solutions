@@ -1,5 +1,5 @@
 using System.ComponentModel.DataAnnotations;
-namespace Diet.Models
+namespace DietList.Models
 {
   public class Diet
   {

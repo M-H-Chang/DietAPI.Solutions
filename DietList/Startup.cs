@@ -4,9 +4,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
-using Diet.Models;
+using DietList.Models;
 
-namespace Diet
+namespace DietList
 {
   public class Startup
   {
@@ -21,7 +21,7 @@ namespace Diet
     public void ConfigureServices(IServiceCollection services)
     {
 
-      services.AddDbContext<DietContext>(opt =>
+      services.AddDbContext<DietListContext>(opt =>
                 opt.UseMySql(Configuration["ConnectionStrings:DefaultConnection"], ServerVersion.AutoDetect(Configuration["ConnectionStrings:DefaultConnection"])));
 
     }

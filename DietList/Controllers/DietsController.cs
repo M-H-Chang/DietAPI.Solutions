@@ -3,17 +3,17 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Diet.Models;
+using DietList.Models;
 
-namespace Diet.Controllers
+namespace DietList.Controllers
 {
   [Route("api/[controller]")]
   [ApiController]
   public class DietsController : ControllerBase
   {
-    private readonly DietContext _db;
+    private readonly DietListContext _db;
 
-    public DietsController(DietContext db)
+    public DietsController(DietListContext db)
     {
       _db = db;
     }
