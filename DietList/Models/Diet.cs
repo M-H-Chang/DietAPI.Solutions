@@ -7,8 +7,6 @@ namespace DietList.Models
     [Required]
     [StringLength(20)]
     public string Name { get; set; }
-    [Required]
-    public string Description { get; set; }
     public string Restriction { get; set; }
   }
 }

@@ -1,7 +1,8 @@
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 namespace DietList.Models
 {
-  public class DietListContext : DbContext
+  public class DietListContext : IdentityDbContext<ApplicationUser>
   {
     public DietListContext(DbContextOptions<DietListContext> options) : base(options)
     {
@@ -10,6 +11,7 @@ namespace DietList.Models
     public DbSet<Diet> Diets { get; set; }
     protected override void OnModelCreating(ModelBuilder builder)
     {
+      base.OnModelCreating(builder);
       builder.Entity<Diet>()
       .HasData(
         new Diet { DietId = 1, Name = "Regular" },
