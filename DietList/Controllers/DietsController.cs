@@ -1,9 +1,9 @@
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using DietList.Models;
+using System.Linq;
 
 namespace DietList.Controllers
 {
@@ -97,7 +97,7 @@ namespace DietList.Controllers
 
     private bool DietExists(int id)
     {
-      return _db.Diets.Any(e => eas.DietId == id);
+      return _db.Diets.Any(e => e.DietId == id);
     }
   }
 }

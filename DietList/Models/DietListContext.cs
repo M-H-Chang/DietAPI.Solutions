@@ -3,8 +3,7 @@ namespace DietList.Models
 {
   public class DietListContext : DbContext
   {
-    public DietListContext(DbContextOptions<DietListContext> options)
-    : base(options)
+    public DietListContext(DbContextOptions<DietListContext> options) : base(options)
     {
 
     }
@@ -12,7 +11,7 @@ namespace DietList.Models
     protected override void OnModelCreating(ModelBuilder builder)
     {
       builder.Entity<Diet>()
-      .hasData(
+      .HasData(
         new Diet { DietId = 1, Name = "Regular" },
         new Diet { DietId = 2, Name = "Paleo" },
         new Diet { DietId = 3, Name = "Vegan" },
